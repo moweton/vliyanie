@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ВЛИЯНИЕ — Бизнес-завтрак с Саадат Аманбаевой</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0D0D0D;color:#fff;overflow:hidden;height:100vh;width:100vw}
+.slide{position:absolute;top:0;left:0;width:100vw;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:60px 80px;opacity:0;pointer-events:none;transition:opacity 0.6s ease;background:#0D0D0D;text-align:center;overflow-y:auto}
+.slide::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(139,69,19,0.3) 0%,transparent 70%);pointer-events:none}
+.slide::after{content:'';position:absolute;bottom:-200px;left:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(139,69,19,0.2) 0%,transparent 70%);pointer-events:none}
+.slide.active{opacity:1;pointer-events:all}
+.slide-content{position:relative;z-index:2;max-width:1100px;width:100%}
+h1{font-size:72px;font-weight:900;text-transform:uppercase;letter-spacing:6px;line-height:1.1}
+h2{font-size:48px;font-weight:800;text-transform:uppercase;letter-spacing:4px;line-height:1.2}
+h3{font-size:36px;font-weight:700;text-transform:uppercase;letter-spacing:2px}
+.gold{color:#C9A84C}.gray{color:#666}.muted{color:#888}.red{color:#E74C3C}.green{color:#27AE60}.blue{color:#4FACFE}
+.small{font-size:18px;font-weight:400}.medium{font-size:24px}.large{font-size:56px}.xlarge{font-size:80px}.xxlarge{font-size:120px}
+.bold{font-weight:800}.italic{font-style:italic}.uppercase{text-transform:uppercase}
+.gold-line{width:120px;height:2px;background:#C9A84C;margin:20px auto}
+.green-line{width:120px;height:2px;background:#27AE60;margin:30px auto}
+.divider{width:80px;height:1px;background:#333;margin:30px auto}
+.card{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:16px;padding:30px;box-shadow:0 0 40px rgba(139,69,19,0.15);text-align:left}
+.card-glow-green{box-shadow:0 0 40px rgba(39,174,96,0.2);border-color:rgba(39,174,96,0.3)}
+.card-glow-orange{box-shadow:0 0 40px rgba(201,168,76,0.2);border-color:rgba(201,168,76,0.3)}
+.list-item{display:flex;align-items:flex-start;gap:12px;margin:12px 0;font-size:20px;line-height:1.5;text-align:left}
+.list-item .marker{color:#C9A84C;flex-shrink:0;font-size:18px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:30px;width:100%}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;width:100%}
+.grid-5{display:grid;grid-template-columns:1fr;gap:16px;width:100%}
+.badge{display:inline-block;padding:6px 18px;border-radius:20px;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:20px}
+.badge-green{background:rgba(39,174,96,0.2);color:#27AE60;border:1px solid rgba(39,174,96,0.3)}
+.badge-gold{background:rgba(201,168,76,0.2);color:#C9A84C;border:1px solid rgba(201,168,76,0.3)}
+.badge-blue{background:rgba(79,172,254,0.2);color:#4FACFE;border:1px solid rgba(79,172,254,0.3)}
+.number-circle{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;flex-shrink:0}
+.number-circle-green{background:rgba(39,174,96,0.2);color:#27AE60;border:1px solid rgba(39,174,96,0.4)}
+.number-circle-gold{background:rgba(201,168,76,0.2);color:#C9A84C;border:1px solid rgba(201,168,76,0.4)}
+.arrow-between{display:flex;align-items:center;justify-content:center;color:#444;font-size:28px}
+.photo-placeholder{width:100%;height:400px;background:#1a1a1a;border:2px dashed #333;border-radius:16px;display:flex;align-items:center;justify-content:center;color:#444;font-size:16px}
+.table-row{display:grid;grid-template-columns:200px 30px 1fr;gap:10px;align-items:center;padding:14px 0;border-bottom:1px solid #1a1a1a;font-size:20px;text-align:left}
+.table-arrow{color:#444;text-align:center}
+.whatsapp-btn,.instagram-btn{display:inline-flex;align-items:center;gap:12px;padding:16px 32px;border-radius:12px;font-size:20px;font-weight:600;text-decoration:none;color:#fff;margin:8px;transition:transform 0.2s}
+.whatsapp-btn:hover,.instagram-btn:hover{transform:scale(1.05)}
+.whatsapp-btn{background:#25D366}
+.instagram-btn{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.nav{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:20px;z-index:100;background:rgba(26,26,26,0.9);padding:12px 24px;border-radius:40px;border:1px solid #2a2a2a;backdrop-filter:blur(10px)}
+.nav button{background:none;border:1px solid #333;color:#fff;width:44px;height:44px;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:all 0.2s}
+.nav button:hover{background:#C9A84C;border-color:#C9A84C;color:#0D0D0D}
+.nav .counter{color:#888;font-size:14px;font-weight:500;min-width:60px;text-align:center}
+.qr-placeholder{width:160px;height:160px;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#333;font-size:14px;margin:0 auto}
+.logo-card{background:#fff;border-radius:12px;padding:16px;display:flex;align-items:center;justify-content:center;min-height:100px}
+.logo-card img{max-width:100%;max-height:80px;object-fit:contain}
+.speaker-photo{width:100%;height:100%;max-height:500px;object-fit:cover;object-position:center 20%;border-radius:16px;border:2px solid #2a2a2a}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 -->
+<div class="slide active" id="slide-1">
+<div class="slide-content">
+<h1 style="font-size:96px;letter-spacing:12px;">ВЛИЯНИЕ</h1>
+<div class="gold-line"></div>
+<p class="medium" style="margin-top:20px;color:#ccc;letter-spacing:1px;">Как говорить так, чтобы вас слушали, выбирали и покупали</p>
+<p class="small muted" style="margin-top:60px;">Бизнес-завтрак с Саадат Аманбаевой</p>
+</div>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide" id="slide-2">
+<div class="slide-content">
+<h1>ЭКСПЕРИМЕНТ</h1>
+<p style="font-size:48px;margin:20px 0;">⚡</p>
+<p class="small muted" style="margin-top:30px;">Нужен один смелый человек</p>
+</div>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide" id="slide-3">
+<div class="slide-content">
+<p style="font-size:24px;color:#555;margin-bottom:20px;">Те же слова.</p>
+<p style="font-size:36px;color:#888;margin-bottom:20px;">Другое состояние.</p>
+<h1 style="font-size:72px;">ДРУГОЙ РЕЗУЛЬТАТ.</h1>
+</div>
+</div>
+
+<!-- SLIDE 4 — ФОТО СААДАТ -->
+<div class="slide" id="slide-4">
+<div class="slide-content">
+<div class="grid-2" style="text-align:left;align-items:center;">
+<div>
+<h2 style="font-size:42px;">СААДАТ<br>АМАНБАЕВА</h2>
+<p class="muted medium" style="margin:16px 0 30px;">Бизнес-тренер по коммуникации и ораторскому мастерству</p>
+<div class="list-item"><span class="marker">⚡</span><span>17 лет профессионального опыта</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>5000+ выпускников</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Филолог-языковед</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Дипломированный психолог</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Профессиональный коуч международного канадского университета</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Эксперт по психологии деловой коммуникации</span></div>
+</div>
+<div style="display:flex;align-items:center;justify-content:center;">
+<img src="saadat.jpg" alt="Саадат Аманбаева" class="speaker-photo">
+</div>
+</div>
+</div>
+</div>
+
+<!-- SLIDE 5 -->
+<div class="slide" id="slide-5">
+<div class="slide-content">
+<h2>ГЛАВНЫЙ КЕЙС — ЭТО Я</h2>
+<div style="margin-top:30px;text-align:left;max-width:800px;margin-left:auto;margin-right:auto;">
+<div class="list-item"><span class="marker">⚡</span><span>Медиа-опыт: ТВ, диктор озвучки и дубляжа, ведущая мероприятий</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Опыт в съёмках кино</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Награждена медалью «Наставник»</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Премия «Лучшие женщины Азии»</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Подготовка спикеров форумов ЦА</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Благодарственное письмо от Министерства экономики КР</span></div>
+</div>
+<p class="small muted" style="margin-top:40px;">Тренинги и обучение руководителей для 18+ компаний</p>
+</div>
+</div>
+
+<!-- SLIDE 6 — НОВЫЙ: КЛИЕНТЫ И ПАРТНЁРЫ -->
+<div class="slide" id="slide-6">
+<div class="slide-content">
+<h2>КЛИЕНТЫ И ПАРТНЁРЫ</h2>
+<p class="muted" style="margin:16px 0 40px;">Компании, которые доверили обучение своих команд</p>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:900px;margin:0 auto;">
+<div class="logo-card"><img src="11.png" alt="Elizaveta"></div>
+<div class="logo-card"><img src="22.png" alt="Platforma"></div>
+<div class="logo-card"><img src="33.png" alt="Govori"></div>
+<div class="logo-card"><img src="44.png" alt="IHLAS"></div>
+<div class="logo-card"><img src="55.png" alt="MNS Holding"></div>
+<div class="logo-card"><img src="66.png" alt="Полезные курсы"></div>
+<div class="logo-card"><img src="images.png" alt="N Group"></div>
+<div class="logo-card"><img src="images_1.png" alt="Inhouse"></div>
+<div class="logo-card"><img src="images_2.png" alt="Клиент"></div>
+</div>
+</div>
+</div>
+
+<!-- SLIDE 7 (was 6) -->
+<div class="slide" id="slide-7">
+<div class="slide-content">
+<h2>КО МНЕ ОБРАЩАЮТСЯ</h2>
+<p class="medium muted" style="margin:20px 0;">Предприниматели и эксперты, чтобы научиться говорить так, чтобы их</p>
+<h1 class="gold" style="font-size:64px;letter-spacing:8px;">ДОВЕРЯЛИ, ВЫБИРАЛИ<br>И ПОКУПАЛИ</h1>
+<p class="muted" style="margin-top:40px;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.6;">Ценность моей работы: раскрываю потенциал людей через речь и помогаю им стать сильнее и успешнее</p>
+</div>
+</div>
+
+<!-- SLIDE 8 (was 7) -->
+<div class="slide" id="slide-8">
+<div class="slide-content">
+<h1>ГДЕ ВЫ СЕЙЧАС?</h1>
+<p style="font-size:48px;margin:20px 0;">👁</p>
+<p class="small muted">Честная самодиагностика</p>
+</div>
+</div>
+
+<!-- SLIDE 9 (was 8) -->
+<div class="slide" id="slide-9">
+<div class="slide-content">
+<div class="grid-5" style="max-width:800px;margin:0 auto;">
+<div class="card" style="display:flex;align-items:flex-start;gap:16px;">
+<span class="gold bold" style="font-size:28px;">1.</span>
+<div><p style="font-size:20px;">Когда я говорю, люди слушают и не перебивают</p><p class="gold" style="margin-top:8px;">__/10</p></div>
+</div>
+<div class="card" style="display:flex;align-items:flex-start;gap:16px;">
+<span class="gold bold" style="font-size:28px;">2.</span>
+<div><p style="font-size:20px;">Я уверен(а) в себе при важных переговорах</p><p class="gold" style="margin-top:8px;">__/10</p></div>
+</div>
+<div class="card" style="display:flex;align-items:flex-start;gap:16px;">
+<span class="gold bold" style="font-size:28px;">3.</span>
+<div><p style="font-size:20px;">Моя речь меняет решения и действия людей</p><p class="gold" style="margin-top:8px;">__/10</p></div>
+</div>
+<div class="card" style="display:flex;align-items:flex-start;gap:16px;">
+<span class="gold bold" style="font-size:28px;">4.</span>
+<div><p style="font-size:20px;">Меня воспринимают как авторитет в моей сфере</p><p class="gold" style="margin-top:8px;">__/10</p></div>
+</div>
+<div class="card" style="display:flex;align-items:flex-start;gap:16px;">
+<span class="gold bold" style="font-size:28px;">5.</span>
+<div><p style="font-size:20px;">Я могу донести ценность за 2 минуты</p><p class="gold" style="margin-top:8px;">__/10</p></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- SLIDE 10 (was 9) -->
+<div class="slide" id="slide-10">
+<div class="slide-content">
+<h1 class="red" style="font-size:64px;">Меньше 35 баллов?</h1>
+<p style="font-size:28px;margin-top:30px;line-height:1.5;">Вы теряете деньги, клиентов и возможности каждый день.</p>
+<p class="muted" style="margin-top:20px;">И скорее всего, вы это чувствуете.</p>
+</div>
+</div>
+
+<!-- SLIDE 11 (was 10) -->
+<div class="slide" id="slide-11">
+<div class="slide-content">
+<h2>ЗНАКОМО?</h2>
+<div style="margin-top:40px;text-align:left;max-width:750px;margin-left:auto;margin-right:auto;">
+<div class="list-item" style="font-size:22px;margin:20px 0;"><span style="color:#E74C3C;flex-shrink:0;">⚠</span><span>Вы знали правильный ответ — но промолчали</span></div>
+<div class="list-item" style="font-size:22px;margin:20px 0;"><span style="color:#E74C3C;flex-shrink:0;">⚠</span><span>Клиент сказал «я подумаю» — а вы не нашли что ответить</span></div>
+<div class="list-item" style="font-size:22px;margin:20px 0;"><span style="color:#E74C3C;flex-shrink:0;">⚠</span><span>Вас перебили — и вы не смогли вернуть слово</span></div>
+</div>
+</div>
+</div>
+
+<!-- SLIDE 12 (was 11) -->
+<div class="slide" id="slide-12">
+<div class="slide-content">
+<h1>ПОЧЕМУ ТАК ПРОИСХОДИТ?</h1>
+<p style="font-size:56px;margin-top:20px;">🧠</p>
+</div>
+</div>
+
+<!-- SLIDE 13 (was 12) -->
+<div class="slide" id="slide-13">
+<div class="slide-content">
+<div class="grid-2" style="max-width:900px;margin:0 auto;">
+<div class="card" style="text-align:center;border-color:rgba(79,172,254,0.3);">
+<p class="blue uppercase bold" style="font-size:20px;letter-spacing:3px;">Сознание</p>
+<p class="blue" style="font-size:80px;font-weight:900;margin:16px 0;">10%</p>
+<p class="muted" style="font-size:18px;line-height:1.6;">Логика, анализ, знания, сила воли</p>
+</div>
+<div class="card" style="text-align:center;border-color:rgba(201,168,76,0.3);">
+<p class="gold uppercase bold" style="font-size:20px;letter-spacing:3px;">Подсознание</p>
+<p class="gold" style="font-size:80px;font-weight:900;margin:16px 0;">90%</p>
+<p class="muted" style="font-size:18px;line-height:1.6;">Установки, убеждения, страхи, эмоции, реакции</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- SLIDE 14 (was 13) -->
+<div class="slide" id="slide-14">
+<div class="slide-content">
+<h3 class="muted" style="margin-bottom:40px;">Подсознание определяет:</h3>
+<div style="max-width:750px;margin:0 auto;text-align:left;">
+<div style="margin:24px 0;"><p class="gold bold" style="font-size:28px;">КАК вы говорите</p><p class="muted" style="margin-top:6px;">не что, а с какой энергией</p></div>
+<div style="margin:24px 0;"><p class="gold bold" style="font-size:28px;">КАК вас воспринимают</p><p class="muted" style="margin-top:6px;">авторитет или «один из многих»</p></div>
+<div style="margin:24px 0;"><p class="gold bold" style="font-size:28px;">КАКИЕ решения принимают люди рядом с вами</p></div>
+</div>
+</div>
+</div>
+
+<!-- SLIDE 15 (was 14) -->
+<div class="slide" id="slide-15">
+<div class="slide-content">
+<p class="gold" style="font-size:160px;font-weight:900;line-height:1;">95%</p>
+<p style="font-size:32px;margin-top:16px;">решений принимаются эмоционально</p>
+<p class="muted small" style="margin-top:30px;">Логика — это оправдание, которое мозг подбирает ПОСЛЕ</p>
+</div>
+</div>
+
+<!-- SLIDE 16 (was 15) -->
+<div class="slide" id="slide-16">
+<div class="slide-content">
+<div style="display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;">
+<div class="card" style="text-align:center;width:260px;border-color:rgba(79,172,254,0.3);">
+<p class="blue uppercase bold" style="font-size:14px;letter-spacing:2px;">Состояние</p>
+<p class="muted small" style="margin-top:10px;">Откуда вы говорите</p>
+</div>
+<div class="arrow-between">→</div>
+<div class="card" style="text-align:center;width:260px;border-color:rgba(201,168,76,0.3);">
+<p class="gold uppercase bold" style="font-size:14px;letter-spacing:2px;">Восприятие</p>
+<p class="muted small" style="margin-top:10px;">Как вас считывают</p>
+</div>
+<div class="arrow-between">→</div>
+<div class="card" style="text-align:center;width:260px;border-color:rgba(39,174,96,0.3);">
+<p class="green uppercase bold" style="font-size:14px;letter-spacing:2px;">Решение</p>
+<p class="muted small" style="margin-top:10px;">Что выбирают люди</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- SLIDE 17 (was 16) -->
+<div class="slide" id="slide-17">
+<div class="slide-content">
+<h3 style="margin-bottom:40px;">Если ваше состояние:</h3>
+<div style="max-width:700px;margin:0 auto;">
+<div class="table-row"><span>Напряжение</span><span class="table-arrow">→</span><span class="red">Собеседник чувствует защиту</span></div>
+<div class="table-row"><span>Страх</span><span class="table-arrow">→</span><span class="red">Собеседник отказывает</span></div>
+<div class="table-row"><span>Неуверенность</span><span class="table-arrow">→</span><span class="red">Вас обесценивают</span></div>
+<div class="table-row" style="border-bottom:none;"><span style="font-weight:700;">Сильная позиция</span><span class="table-arrow">→</span><span class="green bold">Вам доверяют и следуют</span></div>
+</div>
+</div>
+</div>
+
+<!-- SLIDE 18 (was 17) -->
+<div class="slide" id="slide-18">
+<div class="slide-content">
+<p class="muted medium" style="margin-bottom:20px;">Люди считывают всё</p>
+<h2 style="font-size:36px;line-height:1.4;max-width:800px;margin:0 auto 30px;">Человек принимает решение не из слов, а из того, кто перед ним</h2>
+<div style="text-align:left;max-width:600px;margin:0 auto;">
+<div class="list-item"><span class="marker">⚡</span><span>Внутреннюю позицию</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Уровень самоценности</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Согласованность: слова + тело + голос</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Настоящую цель</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Равный вы, ниже или выше</span></div>
+</div>
+</div>
+</div>
+
+<!-- SLIDE 19 (was 18) -->
+<div class="slide" id="slide-19">
+<div class="slide-content">
+<p style="font-size:24px;color:#555;margin-bottom:30px;">Это не «характер людей».</p>
+<h1 style="font-size:60px;line-height:1.2;">ЭТО ВАШ<br>НЕВЕРБАЛЬНЫЙ СИГНАЛ.</h1>
+</div>
+</div>
+
+<!-- SLIDE 20 (was 19) -->
+<div class="slide" id="slide-20">
+<div class="slide-content">
+<h2>ДАВАЙТЕ ПРОВЕРИМ</h2>
+<p class="gold italic" style="font-size:36px;margin-top:30px;">«Моя услуга стоит 50 000 сом»</p>
+</div>
+</div>
+
+<!-- SLIDE 21 (was 20) -->
+<div class="slide" id="slide-21">
+<div class="slide-content">
+<span class="badge badge-green">ПРАКТИКА</span>
+<h2 style="margin-top:10px;">Две версии меня</h2>
+<p style="font-size:56px;margin-top:20px;">👥</p>
+</div>
+</div>
+
+<!-- SLIDE 22 (was 21) -->
+<div class="slide" id="slide-22">
+<div class="slide-content">
+<h3>ШАГ 1: КАК ОБЫЧНО</h3>
+<div class="card" style="max-width:650px;margin:30px auto 0;text-align:left;">
+<div class="list-item"><span class="marker">⚡</span><span>Разбейтесь на пары</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Представьтесь: имя, чем занимаетесь, в чём ваша ценность</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Партнёр ставит оценку 1-10: «Насколько я вам поверил»</span></div>
+</div>
+</div>
+</div>
+
+<!-- SLIDE 23 (was 22) -->
+<div class="slide" id="slide-23">
+<div class="slide-content">
+<h2>3 МИКРО-ИЗМЕНЕНИЯ</h2>
+<div style="max-width:700px;margin:40px auto 0;text-align:left;">
+<div style="display:flex;align-items:flex-start;gap:16px;margin:24px 0;">
+<div class="number-circle number-circle-green">1</div>
+<p style="font-size:22px;padding-top:6px;">Встаньте на обе ноги, вес распределён ровно</p>
+</div>
+<div style="display:flex;align-items:flex-start;gap:16px;margin:24px 0;">
+<div class="number-circle number-circle-green">2</div>
+<p style="font-size:22px;padding-top:6px;">Пауза 2 секунды + взгляд в глаза перед началом</p>
+</div>
+<div style="display:flex;align-items:flex-start;gap:16px;margin:24px 0;">
+<div class="number-circle number-circle-green">3</div>
+<p style="font-size:22px;padding-top:6px;">Первое предложение — медленнее, чем обычно</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- SLIDE 24 (was 23) -->
+<div class="slide" id="slide-24">
+<div class="slide-content">
+<h3>ШАГ 2: НОВАЯ ВЕРСИЯ</h3>
+<div class="card card-glow-green" style="max-width:650px;margin:30px auto 0;text-align:left;">
+<div class="list-item"><span class="marker">⚡</span><span>То же самое представление</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Но с тремя корректировками</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Партнёр снова ставит оценку 1-10</span></div>
+</div>
+</div>
+</div>
+
+<!-- SLIDE 25 (was 24) -->
+<div class="slide" id="slide-25">
+<div class="slide-content">
+<p style="font-size:24px;color:#555;margin-bottom:12px;">Вы сказали те же слова.</p>
+<p style="font-size:24px;color:#555;margin-bottom:12px;">Вы не выучили новый скрипт.</p>
+<p style="font-size:28px;font-weight:700;margin-bottom:0;line-height:1.4;">Вы изменили СОСТОЯНИЕ — и ваш партнёр это почувствовал.</p>
+<div class="green-line"></div>
+<p class="gold" style="font-size:24px;margin-top:20px;">Это 3 инструмента из 12.</p>
+<p class="muted" style="margin-top:10px;">Представьте, что будет, когда вы освоите все двенадцать.</p>
+</div>
+</div>
+
+<!-- SLIDE 26 (was 25) -->
+<div class="slide" id="slide-26">
+<div class="slide-content">
+<h1>ЧТО МЫ СЕГОДНЯ СДЕЛАЛИ</h1>
+<p class="small muted" style="margin-top:20px;">И что вас ждёт дальше</p>
+</div>
+</div>
+
+<!-- SLIDE 27 (was 26) -->
+<div class="slide" id="slide-27">
+<div class="slide-content">
+<div class="grid-3" style="max-width:900px;margin:0 auto;">
+<div class="card card-glow-orange" style="text-align:center;">
+<p class="blue" style="font-size:64px;font-weight:900;">55%</p>
+<p class="blue uppercase bold" style="font-size:16px;letter-spacing:2px;margin:10px 0;">Тело</p>
+<p class="muted small">позиция, состояние, язык тела</p>
+</div>
+<div class="card card-glow-orange" style="text-align:center;">
+<p class="gold" style="font-size:64px;font-weight:900;">38%</p>
+<p class="gold uppercase bold" style="font-size:16px;letter-spacing:2px;margin:10px 0;">Голос</p>
+<p class="muted small">интонация, темп, эмоции</p>
+</div>
+<div class="card card-glow-orange" style="text-align:center;">
+<p style="font-size:64px;font-weight:900;color:#ccc;">7%</p>
+<p class="uppercase bold" style="font-size:16px;letter-spacing:2px;margin:10px 0;color:#ccc;">Слова</p>
+<p class="muted small">логика, аргументы</p>
+</div>
+</div>
+<p class="muted" style="margin-top:40px;max-width:700px;margin-left:auto;margin-right:auto;">93% влияния — невербальное. Поэтому скрипты без позиции не работают.</p>
+</div>
+</div>
+
+<!-- SLIDE 28 (was 30) — ГЛАВНЫЙ РЕЗУЛЬТАТ -->
+<div class="slide" id="slide-28">
+<div class="slide-content">
+<h2>ГЛАВНЫЙ РЕЗУЛЬТАТ</h2>
+<p class="italic muted" style="margin:16px 0 30px;">После курса вы:</p>
+<div style="text-align:left;max-width:700px;margin:0 auto;">
+<div class="list-item"><span class="marker">⚡</span><span>Управляете тем, как вас воспринимают</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Чувствуете внутреннюю устойчивость</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Держите позицию в переговорах</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Уверенно выступаете перед любой аудиторией и на камеру</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Говорите структурно и без «воды»</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Управляете голосом и невербаликой</span></div>
+</div>
+<p class="gold bold" style="margin-top:30px;font-size:22px;">Итог: вы звучите как человек, с которым считаются.</p>
+</div>
+</div>
+
+<!-- SLIDE 29 (was 31) — РЕЗУЛЬТАТЫ В ДЕНЬГАХ -->
+<div class="slide" id="slide-29">
+<div class="slide-content">
+<h2>РЕЗУЛЬТАТЫ В ДЕНЬГАХ И СТАТУСЕ</h2>
+<p class="muted" style="margin:16px 0 30px;">Участники после программы:</p>
+<div style="text-align:left;max-width:700px;margin:0 auto;">
+<div class="list-item"><span class="marker">⚡</span><span>Повышают чек</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Закрывают более крупные сделки</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Получают рост в карьере</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Начинают активно выступать</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Выходят в медийность</span></div>
+<div class="list-item"><span class="marker">⚡</span><span>Влияют через голос, паузы и невербалику</span></div>
+</div>
+<p class="gold bold" style="margin-top:30px;font-size:22px;">Влияние = рычаг роста. Статус = доход.</p>
+</div>
+</div>
+
+<!-- SLIDE 30 (was 32) -->
+<div class="slide" id="slide-30">
+<div class="slide-content">
+<h1>А ТЕПЕРЬ ПОКАЖУ КОЕ-ЧТО</h1>
+<p class="gold small" style="margin-top:20px;">Тема 7-го урока</p>
+</div>
+</div>
+
+<!-- SLIDE 31 (was 33) -->
+<div class="slide" id="slide-31">
+<div class="slide-content">
+<p style="font-size:24px;color:#555;margin-bottom:16px;">Техники работают только когда есть позиция.</p>
+<p class="red" style="font-size:24px;margin-bottom:30px;">Без позиции — это фальшь или давление.</p>
+<div class="divider"></div>
+<p style="font-size:22px;color:#555;margin-top:30px;margin-bottom:16px;">Убеждение = борьба</p>
+<h2 class="green" style="font-size:44px;">ОСОЗНАННОЕ ВЛИЯНИЕ = ПРИТЯЖЕНИЕ</h2>
+</div>
+</div>
+
+<!-- SLIDE 32 (was 27) — БЛОК 1 (ПЕРЕНЕСЁН) -->
+<div class="slide" id="slide-32">
+<div class="slide-content">
+<span class="badge badge-gold">БЛОК 1</span>
+<h2 style="margin-top:10px;">ВНУТРЕННЯЯ ПСИХОЛОГИЯ ОРАТОРА</h2>
+<p class="gold italic" style="margin:16px 0 30px;">Задача блока — убрать то, что тормозит вас изнутри</p>
+<div class="grid-2" style="max-width:800px;margin:0 auto;gap:16px;">
+<div class="card" style="position:relative;">
+<p class="gold bold small">Уроки 1-2</p>
+<p style="margin-top:8px;">Как перестать зажиматься</p>
+<span style="position:absolute;top:12px;right:12px;color:#27AE60;font-size:13px;font-weight:700;">СЕГОДНЯ ✓</span>
+</div>
+<div class="card">
+<p class="gold bold small">Урок 3</p>
+<p style="margin-top:8px;">Как производить впечатление до того, как открыли рот</p>
+</div>
+<div class="card" style="grid-column:span 2;">
+<p class="gold bold small">Урок 4</p>
+<p style="margin-top:8px;">Голос, которому доверяют</p>
+</div>
+</div>
+<p class="green small" style="margin-top:24px;">Результат: вы говорите спокойно и держите позицию</p>
+</div>
+</div>
+
+<!-- SLIDE 33 (was 28) — БЛОК 2 часть 1 (ПЕРЕНЕСЁН) -->
+<div class="slide" id="slide-33">
+<div class="slide-content">
+<span class="badge badge-blue">БЛОК 2 — часть 1</span>
+<h2 style="margin-top:10px;">РЕЧЬ, СТРУКТУРА И ВЫСТУПЛЕНИЯ</h2>
+<p class="blue italic" style="margin:16px 0 30px;">Как строить речь, как выступать, как доносить мысль</p>
+<div class="grid-3" style="max-width:900px;margin:0 auto;gap:16px;">
+<div class="card">
+<p class="gold bold small">Урок 5</p>
+<p style="margin-top:8px;">Как говорить чётко, без воды</p>
+</div>
+<div class="card">
+<p class="gold bold small">Урок 6</p>
+<p style="margin-top:8px;">Как строить речь, после которой соглашаются</p>
+</div>
+<div class="card">
+<p class="gold bold small">Урок 7</p>
+<p style="margin-top:8px;">Пошаговый алгоритм сильного выступления</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- SLIDE 34 (was 29) — БЛОК 2 часть 2 (ПЕРЕНЕСЁН) -->
+<div class="slide" id="slide-34">
+<div class="slide-content">
+<span class="badge badge-gold">БЛОК 2 — часть 2</span>
+<h2 style="margin-top:10px;font-size:32px;">ВЛИЯНИЕ, АУДИТОРИЯ И ПСИХОЛОГИЯ РЕШЕНИЙ</h2>
+<p class="gold italic" style="margin:16px 0 30px;">Как управлять вниманием, формулировками и реакцией людей</p>
+<div class="grid-3" style="max-width:900px;margin:0 auto;gap:16px;">
+<div class="card">
+<p class="gold bold small">Урок 8</p>
+<p style="margin-top:8px;">Как держать внимание зала</p>
+</div>
+<div class="card">
+<p class="gold bold small">Урок 9</p>
+<p style="margin-top:8px;">Слова, которые меняют решения</p>
+</div>
+<div class="card">
+<p class="gold bold small">Урок 10</p>
+<p style="margin-top:8px;">Почему люди говорят «да»</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- SLIDE 35 (was 34) -->
+<div class="slide" id="slide-35">
+<div class="slide-content">
+<h2>Посмотрите на свою карточку.</h2>
+<p class="medium muted" style="margin-top:30px;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.5;">Те баллы, которые вы поставили 2 часа назад — вы бы сейчас поставили те же?</p>
+</div>
+</div>
+
+<!-- SLIDE 36 (was 35) -->
+<div class="slide" id="slide-36">
+<div class="slide-content">
+<span class="badge badge-gold">ГОТОВЫ ПРОДОЛЖИТЬ?</span>
+<h2 style="margin-top:10px;">Курс «ВЛИЯНИЕ»</h2>
+<div style="text-align:left;max-width:600px;margin:30px auto 0;">
+<div class="list-item" style="font-size:22px;margin:16px 0;"><span class="green" style="flex-shrink:0;">✓</span><span>10 живых уроков с практикой</span></div>
+<div class="list-item" style="font-size:22px;margin:16px 0;"><span class="green" style="flex-shrink:0;">✓</span><span>Работа с подсознанием, голосом, телом и речью</span></div>
+<div class="list-item" style="font-size:22px;margin:16px 0;"><span class="green" style="flex-shrink:0;">✓</span><span>Персональная обратная связь от тренера</span></div>
+<div class="list-item" style="font-size:22px;margin:16px 0;"><span class="green" style="flex-shrink:0;">✓</span><span>Группа единомышленников</span></div>
+<div class="list-item" style="font-size:22px;margin:16px 0;"><span class="green" style="flex-shrink:0;">✓</span><span>Поддержка между занятиями</span></div>
+</div>
+</div>
+</div>
+
+<!-- SLIDE 37 (was 36) -->
+<div class="slide" id="slide-37">
+<div class="slide-content">
+<h2>ФОРМАТ</h2>
+<div class="grid-3" style="max-width:900px;margin:30px auto 0;gap:16px;">
+<div class="card card-glow-orange" style="text-align:center;">
+<p class="gold" style="font-size:56px;font-weight:900;">6</p>
+<p class="uppercase bold" style="font-size:14px;letter-spacing:2px;margin-top:8px;">недель</p>
+</div>
+<div class="card card-glow-orange" style="text-align:center;">
+<p class="gold" style="font-size:56px;font-weight:900;">10</p>
+<p class="uppercase bold" style="font-size:14px;letter-spacing:2px;margin-top:8px;">уроков по 2 часа</p>
+</div>
+<div class="card card-glow-orange" style="text-align:center;">
+<p class="gold" style="font-size:56px;font-weight:900;">10</p>
+<p class="uppercase bold" style="font-size:14px;letter-spacing:2px;margin-top:8px;">человек макс.</p>
+</div>
+</div>
+<div style="margin-top:30px;">
+<p style="font-size:20px;">Зачётные выступления &nbsp;&bull;&nbsp; Индивидуальная обратная связь</p>
+<p class="muted italic small" style="margin-top:16px;">Авторская методика, по которой 5000+ предпринимателей усилили свой статус и увеличили сделки</p>
+</div>
+</div>
+</div>
+
+<!-- SLIDE 38 (was 37) — ЦЕНА 58 000 -->
+<div class="slide" id="slide-38">
+<div class="slide-content">
+<p class="gold" style="font-size:96px;font-weight:900;">58 000 СОМ</p>
+<p style="font-size:24px;margin-top:10px;color:#ccc;">= 5 800 сом за урок</p>
+<div class="grid-2" style="max-width:600px;margin:40px auto 0;gap:16px;">
+<div class="card" style="text-align:center;">
+<p style="font-size:18px;">Рассрочка на 3 месяца через MBank</p>
+</div>
+<div class="card" style="text-align:center;">
+<p style="font-size:18px;">Группа до 10 человек</p>
+</div>
+</div>
+<p class="muted small" style="margin-top:30px;">Специальная цена для участников завтрака — действует 48 часов</p>
+</div>
+</div>
+
+<!-- SLIDE 39 (was 38) -->
+<div class="slide" id="slide-39">
+<div class="slide-content">
+<p style="font-size:24px;color:#555;margin-bottom:12px;">Это не курс скриптов за 10-20 тысяч.</p>
+<p style="font-size:30px;font-weight:700;margin-bottom:30px;line-height:1.4;">Это система трансформации того, КАК вас воспринимают.</p>
+<div class="divider"></div>
+<p class="muted" style="margin-top:30px;">Скрипты работают, пока вы их помните.</p>
+<p class="green bold" style="font-size:24px;margin-top:12px;">Позиция остаётся с вами навсегда.</p>
+<p class="muted italic small" style="margin-top:30px;">Каждое занятие — 5 800 сом. Стоимость одного бизнес-ланча. Результат — на годы.</p>
+</div>
+</div>
+
+<!-- SLIDE 40 (was 39) -->
+<div class="slide" id="slide-40">
+<div class="slide-content">
+<h2 style="line-height:1.4;">Вопрос не в том, нужно ли вам это.</h2>
+<p class="gold" style="font-size:36px;font-weight:700;margin-top:30px;">Вопрос — готовы ли вы продолжить.</p>
+<p class="muted" style="margin-top:40px;">@saadat.amanbaeva</p>
+</div>
+</div>
+
+<!-- SLIDE 41 (was 40) -->
+<div class="slide" id="slide-41">
+<div class="slide-content">
+<p style="font-size:30px;color:#666;margin-bottom:20px;">Убеждают многие.</p>
+<h1 class="gold" style="font-size:80px;letter-spacing:6px;">ВЛИЯЮТ — ЕДИНИЦЫ.</h1>
+</div>
+</div>
+
+<!-- SLIDE 42 (was 41) -->
+<div class="slide" id="slide-42">
+<div class="slide-content">
+<h2 style="margin-bottom:30px;">Саадат Аманбаева</h2>
+<div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:30px;">
+<a href="https://wa.me/996707555056" class="whatsapp-btn" target="_blank">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
++996 707 555 056
+</a>
+<a href="https://instagram.com/saadat.amanbaeva" class="instagram-btn" target="_blank">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+@saadat.amanbaeva
+</a>
+</div>
+<div class="qr-placeholder">QR-код</div>
+<p style="margin-top:24px;font-size:20px;">Курс «Искусство влияния» — 10 уроков</p>
+</div>
+</div>
+
+<!-- Navigation -->
+<div class="nav">
+<button onclick="prevSlide()" id="prevBtn">&#8592;</button>
+<span class="counter" id="counter">1 / 42</span>
+<button onclick="nextSlide()" id="nextBtn">&#8594;</button>
+</div>
+
+<script>
+let current=1;const total=42;
+function showSlide(n){if(n<1||n>total)return;document.querySelector('.slide.active').classList.remove('active');current=n;document.getElementById('slide-'+current).classList.add('active');document.getElementById('counter').textContent=current+' / '+total;}
+function nextSlide(){showSlide(current+1)}
+function prevSlide(){showSlide(current-1)}
+document.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();nextSlide()}if(e.key==='ArrowLeft'){e.preventDefault();prevSlide()}});
+let touchStartX=0;
+document.addEventListener('touchstart',function(e){touchStartX=e.changedTouches[0].screenX});
+document.addEventListener('touchend',function(e){const diff=touchStartX-e.changedTouches[0].screenX;if(Math.abs(diff)>50){diff>0?nextSlide():prevSlide()}});
+</script>
+
+</body>
+</html>
